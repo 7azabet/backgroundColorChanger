@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Background With One Click!</title>
+    <style>
+      /* All elements */
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+      body {
+        background-color: #0d161f;
+        overflow: hidden;
+        margin: 0;
+        word-break: break-all;
+      }
+      .defination-container {
+        color: black;
+        font-weight: bold;
+        word-break: break-all;
+        text-shadow: 0 0 1px aliceblue, 0 0 1px aliceblue, 0 0 1px aliceblue;
+        margin: 5px;
+      }
+      /* Span && Colors */
+      .colors-container {
+        width: 100%;
+        height: 50px;
+        background-color: aliceblue;
+      }
+      div {
+        width: 20%;
+        height: 100%;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+      }
+      .colors-container {
+        margin: 0px;
+        padding: 0px;
+      }
+      .colors-container div p {
+        color: black;
+        font-weight: bold;
+        word-break: break-all;
+        text-shadow: 0 0 1px aliceblue, 0 0 2px aliceblue, 0 0 3px aliceblue,
+          0 0 4px aliceblue, 0 0 5px aliceblue, 0 0 6px aliceblue;
+      }
+
+      .colors-container #blue {
+        background-color: blue;
+      }
+      .colors-container #red {
+        background-color: red;
+      }
+      .colors-container #yellow {
+        background-color: yellow;
+      }
+      .colors-container #green {
+        background-color: green;
+      }
+      .colors-container #cadetblue {
+        background-color: cadetblue;
+      }
+      .colors-container #navy {
+        background-color: navy;
+      }
+      .colors-container #fuchsia {
+        background-color: fuchsia;
+      }
+      .colors-container #purple {
+        background-color: purple;
+      }
+
+      .colors-container #orange {
+        background-color: orange;
+      }
+      .colors-container #maroon {
+        background-color: maroon;
+      }
+      .colors-container #peachpuff {
+        background-color: peachpuff;
+      }
+      .colors-container #indigo {
+        background-color: indigo;
+      }
+      .colors-container #teal {
+        background-color: teal;
+      }
+      .colors-container #lightpink {
+        background-color: lightpink;
+      }
+
+      .clear {
+        clear: both;
+      }
+      .button-container {
+        text-align: center;
+        display: block;
+      }
+      #bu {
+        background-color: #0d161f;
+        border: 0;
+        outline: none;
+        margin: 4px;
+        padding: 6px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        height: 40px;
+        text-align: center;
+        color: azure;
+      }
+
+      /* Footer  */
+      footer {
+        background-color: #1b1b1b;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        /* height: 40px; */
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        color: white;
+      }
+      footer b {
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="test"></span>
+    <section class="defination-container">
+      <h1>
+        Hello, How to change your website background<br />with just one click ?!
+      </h1>
+      <p>In this web page, I'll learn you how to do that!</p>
+      <p>Enjoy!</p>
+    </section>
+    <br />
+    <!-- Colors Container -->
+    <div class="colors-container">
+      <div onclick="changeColor('blue')" id="blue"><p>Blue</p></div>
+      <div onclick="changeColor('red')" id="red"><p>Red</p></div>
+      <div onclick="changeColor('yellow')" id="yellow"><p>Yellow</p></div>
+      <div onclick="changeColor('green')" id="green"><p>Green</p></div>
+      <div onclick="changeColor('cadetblue')" id="cadetblue">
+        <p>Cadetblue</p>
+      </div>
+      <div onclick="changeColor('navy')" id="navy"><p>Navy</p></div>
+      <div onclick="changeColor('fuchsia')" id="fuchsia"><p>Fuchsia</p></div>
+      <div onclick="changeColor('orange')" id="orange"><p>Orange</p></div>
+      <div onclick="changeColor('maroon')" id="maroon"><p>Maroon</p></div>
+      <div onclick="changeColor('purple')" id="purple"><p>Purple</p></div>
+      <div onclick="changeColor('silver')" id="silver"><p>Silver</p></div>
+      <div onclick="changeColor('peachpuff')" id="peachpuff">
+        <p>Peachpuff</p>
+      </div>
+      <div onclick="changeColor('indigo')" id="indigo"><p>Indigo</p></div>
+      <div onclick="changeColor('teal')" id="teal"><p>Teal</p></div>
+      <div onclick="changeColor('lightpink')" id="lightpink">
+        <p>Light Pink</p>
+      </div>
+    </div>
+    <!-- End Of Colors Container -->
+    <div class="clear"></div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- Default Color Button - aliasblue -->
+    <span class="button-container">
+      <input
+        id="bu"
+        type="button"
+        onclick="defaultColor()"
+        value="Default Background (Black Pearl)"
+      />
+    </span>
+    <!-- JS Code -->
+    <script>
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+
+      function defaultColor() {
+        document.body.style.backgroundColor = "#0d161f";
+      }
+      /*      var x = window.getComputedStyle(document.querySelector("body"))
+      alert(x.getPropertyValue("background-color")); */
+    </script>
+    <footer>
+      <p>Copyright&copy; all rights reserved to <b>7azabet</b>.</p>
+    </footer>
+  </body>
+</html>
